@@ -3,8 +3,13 @@ let numeroSecreto = 29;
 console.log('O número secreto é: ' + numeroSecreto);
 let chute =prompt('Escolha um numero entre 1 e 30')
 
+
 if (numeroSecreto == chute) {
-    console.log('Isso ai! Você descobriu o numero secreto! (29)')
+    alert(`Isso ai! Você descobriu o numero secreto! ${numeroSecreto}`)
 }   else{
-    alert('Você errou :(')
+    if (chute > numeroSecreto) {
+        alert(`O numero secreto é maior que ${chute}`)
+    } else {
+        alert(`O numero secreto é menor que ${chute}`)
+    }
 }
