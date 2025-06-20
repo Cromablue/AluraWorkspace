@@ -7,7 +7,7 @@ let tentativas = 1;
 while (chute != numeroSecreto) {
     chute =prompt('Escolha um numero entre 1 e 30');
     if (numeroSecreto == chute) {
-        alert(`Isso ai! Você descobriu o numero secreto! ${numeroSecreto} com ${tentativas} tentativas.`);
+        break;
     }   else{
         if (chute < numeroSecreto) {
             alert(`O numero secreto é maior que ${chute}`);
@@ -16,6 +16,9 @@ while (chute != numeroSecreto) {
         }
         tentativas++;
     }
-
-
+}
+if (tentativas > 1) {
+    alert(`Isso ai! Vocé descobriu o numero secreto ${numeroSecreto} com ${tentativas} tentativas.`);
+}else {
+    alert(`Isso ai! Vocé descobriu o numero secreto ${numeroSecreto} com ${tentativas} tentativa.`);
 }
